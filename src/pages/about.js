@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "../style/normalize.css"
-import "../style/all.scss"
+import "../style/normalize.css";
+import "../style/all.scss";
 
 const AboutPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
@@ -17,43 +17,57 @@ const AboutPage = ({ data }, location) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
-          </h2>
           <figure className="kg-card kg-image-card kg-width-full">
             <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
+              fluid={data.greenBannerCar.childImageSharp.fluid}
               className="kg-image"
             />
             <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
-          <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
-          </p>
-          <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
-          </p>
-          <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
-          </p>
+          <h2 id="briefAbout">
+            Quality Work at Reasonable Prices. From Custom Paint Jobs to Fender
+            Benders, We do it all!
+            <br />
+            We also do Restorations!
+          </h2>
+
+          <h3 id="dynamic-styles">
+            <u>Contact Us</u>
+          </h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>Phone</td>
+                <td>(708) 527-4329</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>
+                  <a
+                    href="https://www.google.com/maps/place/10321+Vans+Dr+Unit+C,+Frankfort,+IL+60423/@41.4886656,-87.8684424,17z/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    10321 Vans Dr, Unit C<br />
+                    Frankfort, IL
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Hours</td>
+                <td>
+                  M-F: 8a-4p
+                  <br />
+                  Sat: 8a-12p
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -62,9 +76,7 @@ const indexQuery = graphql`
         title
       }
     }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
+    greenBannerCar: file(relativePath: { eq: "greenBannerCar.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
@@ -72,13 +84,13 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />
-)
+);

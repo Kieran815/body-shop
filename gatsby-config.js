@@ -1,5 +1,6 @@
-const urljoin = require("url-join")
-const siteConfig = require("./siteConfig")
+const urljoin = require("url-join");
+const siteConfig = require("./siteConfig");
+require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
@@ -72,8 +73,8 @@ module.exports = {
         develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
-        ignore: ['/ignored.css', 'prismjs/', '/prism.css', 'docsearch.js/'], // Ignore files/folders
-        purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+        ignore: ["/ignored.css", "prismjs/", "/prism.css", "docsearch.js/"], // Ignore files/folders
+        purgeOnly: ["components/", "/main.css", "bootstrap/"], // Purge only these files/folders
       },
     },
     {
@@ -98,6 +99,34 @@ module.exports = {
     // `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-source-facebook-graphql`,
+      options: {
+        // Facebook account or page ID
+        pageId: 1521985924719122,
+        params: {
+          fields: [
+            "about",
+            "bio",
+            "category",
+            "category_list",
+            "company_overview",
+            "features",
+            "hours",
+            "phone",
+            "location",
+            "username",
+            "description",
+            "products",
+            "photos{webp_images}",
+            "rating_count",
+            "place_type",
+          ],
+        },
+        // Access Token from facebook
+        accessToken: process.env.GATSBY_FACEBOOK_GRAPH_TOKEN,
+      },
+    },
   ],
-}
+};

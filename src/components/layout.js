@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-const Layout = props => {
-  const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+const Layout = (props) => {
+  const { title, children } = props;
+  const [toggleNav, setToggleNav] = React.useState(false);
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -21,7 +21,8 @@ const Layout = props => {
             >
               <div className="hamburger-box">
                 <div className="hamburger-inner" />
-              </div> <div className="hamburger-text-menu-text hidden">Menu</div>
+              </div>{" "}
+              <div className="hamburger-text-menu-text hidden">Menu</div>
             </div>
           </a>
           <nav id="swup" className="site-head-left">
@@ -48,7 +49,7 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/The-Body-Shop-by-Timmy-V-1521985924719122"
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,22 +64,6 @@ const Layout = props => {
               >
                 Twitter
               </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
-              <a
-                href="https://github.com/jooplaan/gatsby-london-night-and-day"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
             </div>
           </div>
         </div>
@@ -89,18 +74,10 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

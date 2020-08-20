@@ -1,9 +1,9 @@
 module.exports = {
-  name: 'London Night and Day',
-  shortName: '',
-  description: 'A bold, minimal theme for Gatsby, focused on clean typography & beautiful imagery',
-  url: 'https://www.jooplaan.com', // Domain of your site without prefix!
-  prefix: '/',
-  author: 'jooplaan',
-  twitter: ''
-}
+  name: "The Body Shop by Timmy V.",
+  shortName: "The Body Shop",
+  description: "Repairs | Restoration | Custom",
+  url: "https://www.jooplaan.com", // Domain of your site without prefix!
+  prefix: "/",
+  author: "Kieran Milligan",
+  twitter: "",
+};
