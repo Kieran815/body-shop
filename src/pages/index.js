@@ -3,7 +3,6 @@ import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import Bio from "../components/bio"
 import PostCard from "../components/postCard";
 
 import "../style/normalize.css";
@@ -18,7 +17,15 @@ const BlogIndex = ({ data }, location) => {
     <Layout title={siteTitle}>
       <SEO
         title="Blog"
-        keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[
+          `restorations`,
+          `repairs`,
+          `custom`,
+          `custom paint`,
+          `auto`,
+          `auto body`,
+          `body`,
+        ]}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (

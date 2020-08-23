@@ -1,5 +1,6 @@
 const urljoin = require("url-join");
 const siteConfig = require("./siteConfig");
+
 require("dotenv").config();
 
 module.exports = {
@@ -100,33 +101,30 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-source-facebook-graphql`,
-      options: {
-        // Facebook account or page ID
-        pageId: 1521985924719122,
-        params: {
-          fields: [
-            "about",
-            "bio",
-            "category",
-            "category_list",
-            "company_overview",
-            "features",
-            "hours",
-            "phone",
-            "location",
-            "username",
-            "description",
-            "products",
-            "photos{webp_images}",
-            "rating_count",
-            "place_type",
-          ],
-        },
-        // Access Token from facebook
-        accessToken: process.env.GATSBY_FACEBOOK_GRAPH_TOKEN,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-facebook-graphql`,
+    //   options: {
+    //     // Facebook account or page ID
+    //     pageId: 1521985924719122,
+    //     params: {
+    //       fields: [
+    //         "about",
+    //         "category",
+    //         "category_list",
+    //         "company_overview",
+    //         "hours",
+    //         "phone",
+    //         "location",
+    //         "description",
+    //         "products",
+    //         "photos{webp_images}",
+    //         "rating_count",
+    //         "place_type",
+    //       ],
+    //     },
+    //     // Access Token from facebook
+    //     accessToken: EAAEUWw1GzuUBAMcpoJkk8dLeVS7yoClzupX3mmdp8dwHxkfWHnekaEAR9IADAoiHBZAZAFRcddoA1bzjUfxdDGzGHW7RLArfTUl7aaz4Fonz8oSNsyrX2GkMaJTbBXzBDZCqmFMYxYbbum3XLee3TJAs77yaUvlzkLdt9fYDZCrTdSYS4T7CUUQSAfe3rlZCrlaUkZCS63ditzXFZBp0BXSIP5owdr7T9Iib4pS9877SwZDZD
+    //   },
+    // },
   ],
 };
