@@ -13,34 +13,16 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="About"
-        keywords={[
-          `The Body Shop`,
-          `AutoBody`,
-          `Auto`,
-          `Body`,
-          `Hours`,
-          `Address`,
-        ]}
-      />
+      <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2 id="briefAbout">
             Quality Work at Reasonable Prices. From Custom Paint Jobs to Fender
-            Benders or Full Restorations,
+            Benders, We do it all!
             <br />
-            We do it all!
+            We also do Restorations!
           </h2>
-
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.BodyShopSign.childImageSharp.fluid}
-              className="kg-image"
-            />
-          </figure>
-
           <h3 id="dynamic-styles">
             <u>Contact Us</u>
           </h3>
@@ -73,6 +55,12 @@ const AboutPage = ({ data }, location) => {
               </tr>
             </tbody>
           </table>
+          <figure className="kg-card kg-image-card kg-width-full">
+            <Img
+              fluid={data.greenBannerCar.childImageSharp.fluid}
+              className="kg-image"
+            />
+          </figure>
         </div>
       </article>
     </Layout>
@@ -86,9 +74,7 @@ const indexQuery = graphql`
         title
       }
     }
-    BodyShopSign: file(
-      relativePath: { eq: "../../content/assets/TheBodyShopSign.jpg" }
-    ) {
+    greenBannerCar: file(relativePath: { eq: "greenBannerCar.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid

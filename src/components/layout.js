@@ -36,9 +36,6 @@ const Layout = (props) => {
               <li className="nav-elements" role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
               </li>
-              <li className="nav-tags" role="menuitem">
-                <Link to={`/tags`}>Tags</Link>
-              </li>
             </ul>
           </nav>
           <div className="site-head-center">
@@ -56,14 +53,7 @@ const Layout = (props) => {
               >
                 Facebook
               </a>
-              <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
+              <a href="tel:7085274329">(708) 527-4329</a>
             </div>
           </div>
         </div>

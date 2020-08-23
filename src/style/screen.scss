@@ -25,6 +25,7 @@ production stylesheet in assets/built/screen.scss using gulp dev
 
 body {
   font-family: $font-sans-serif;
+  background-image: url("../../content/assets/background.jpg");
   background: $color-bg;
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
