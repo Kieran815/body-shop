@@ -1,8 +1,8 @@
 ---
-title: Custom Paint
+title: Specialty Custom Paint Work
 date: "2014-12-29"
-thumbnail: ./CustomRacer.jpg
-description: Let your hair down and paint the town red
+thumbnail: ./CustomEngine2.jpg
+description: Custom Paint Jobs an Nearly Anything
 ---
 
 ### Here a 350 chevy motor we painted!!
@@ -20,8 +20,13 @@ description: Let your hair down and paint the town red
 ### Custom Hotrod Paint Job
 
 ![](./CustomHotRod.jpg)
+![](./CustomHotRod2.jpg)
 
 ### We Paint Helmets, Too! Love That Green!
 
 ![](./CustomHelmet2.jpg)
 ![](./CustomHelmet.jpg)
+
+### YES WE DO COCA-COLA COOLERS ALSO!!!!!!
+
+![](./CokeMachine.jpg)

@@ -13,23 +13,33 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="About"
+        keywords={[
+          `The Body Shop`,
+          `AutoBody`,
+          `Auto`,
+          `Body`,
+          `Hours`,
+          `Address`,
+        ]}
+      />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.greenBannerCar.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
-          </figure>
           <h2 id="briefAbout">
             Quality Work at Reasonable Prices. From Custom Paint Jobs to Fender
-            Benders, We do it all!
+            Benders or Full Restorations,
             <br />
-            We also do Restorations!
+            We do it all!
           </h2>
+
+          <figure className="kg-card kg-image-card kg-width-full">
+            <Img
+              fluid={data.BodyShopSign.childImageSharp.fluid}
+              className="kg-image"
+            />
+          </figure>
 
           <h3 id="dynamic-styles">
             <u>Contact Us</u>
@@ -76,7 +86,9 @@ const indexQuery = graphql`
         title
       }
     }
-    greenBannerCar: file(relativePath: { eq: "greenBannerCar.jpg" }) {
+    BodyShopSign: file(
+      relativePath: { eq: "../../content/assets/TheBodyShopSign.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
