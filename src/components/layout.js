@@ -33,28 +33,27 @@ const Layout = (props) => {
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+              <li>
+                <a href="tel:7085274329">Call</a>
               </li>
             </ul>
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
               {title}
+              <br />
+              <sub style={{ fontSize: "0.50em" }}>by Timmy V.</sub>
             </Link>
           </div>
           <div className="site-head-right">
-            <div className="social-links">
-              <a
-                href="https://www.facebook.com/The-Body-Shop-by-Timmy-V-1521985924719122"
-                title="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-              <a href="tel:7085274329">(708) 527-4329</a>
-            </div>
+            <a
+              href="https://www.facebook.com/The-Body-Shop-by-Timmy-V-1521985924719122"
+              title="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </header>

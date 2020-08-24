@@ -23,18 +23,28 @@ const AboutPage = ({ data }, location) => {
             <br />
             We also do Restorations!
           </h2>
-          <h3 id="dynamic-styles">
-            <u>Contact Us</u>
+          <h3 id="dynamic-styles" className="contact_us">
+            Contact Us
           </h3>
-          <table>
+          <table className="infoTable">
             <tbody>
               <tr>
                 <td>Phone</td>
-                <td>(708) 527-4329</td>
+                <td className="answer">
+                  <a href="tel:7085274329">(708) 527-4329</a>
+                </td>
+              </tr>
+              <tr>
+                <td>E-Mail</td>
+                <td className="answer">
+                  <a href="mailto:thebodyshopbytimmyv@gmail.com">
+                    thebodyshopbytimmyv@gmail.com
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>Address</td>
-                <td>
+                <td className="answer">
                   <a
                     href="https://www.google.com/maps/place/10321+Vans+Dr+Unit+C,+Frankfort,+IL+60423/@41.4886656,-87.8684424,17z/"
                     target="_blank"
@@ -47,7 +57,7 @@ const AboutPage = ({ data }, location) => {
               </tr>
               <tr>
                 <td>Hours</td>
-                <td>
+                <td className="answer">
                   M-F: 8a-4p
                   <br />
                   Sat: 8a-12p
@@ -63,6 +73,9 @@ const AboutPage = ({ data }, location) => {
           </figure>
         </div>
       </article>
+      <sub className="signature">
+        Site Created by <a href="kieran815.github.io">K. Michael Milligan</a>
+      </sub>
     </Layout>
   );
 };

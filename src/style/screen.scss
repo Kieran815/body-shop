@@ -3,6 +3,9 @@
 This is a development CSS file which is built to a minified
 production stylesheet in assets/built/screen.scss using gulp dev
 
+
+
+
 */
 
 /* Lib - Local component imports
@@ -212,12 +215,11 @@ body {
   font-size: 2.1rem;
   line-height: 1em;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1px;
   overflow: hidden;
   text-overflow: ellipsis;
-  // @include font('Remarcle', 'Remarcle');
-  // font-family: Remarcle;
+  @include font("Remarcle", "Remarcle");
+  font-family: Remarcle, arial, sans-serif;
   @include light-mode {
     color: $color-body-font-light;
   }

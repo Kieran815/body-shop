@@ -1,8 +1,6 @@
 const urljoin = require("url-join");
 const siteConfig = require("./siteConfig");
 
-require("dotenv").config();
-
 module.exports = {
   siteMetadata: {
     title: siteConfig.name,
@@ -101,6 +99,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-sass",
+    // may come back later and add facebook data.
     // {
     //   resolve: `gatsby-source-facebook-graphql`,
     //   options: {
@@ -123,7 +122,7 @@ module.exports = {
     //       ],
     //     },
     //     // Access Token from facebook
-    //     accessToken: EAAEUWw1GzuUBAMcpoJkk8dLeVS7yoClzupX3mmdp8dwHxkfWHnekaEAR9IADAoiHBZAZAFRcddoA1bzjUfxdDGzGHW7RLArfTUl7aaz4Fonz8oSNsyrX2GkMaJTbBXzBDZCqmFMYxYbbum3XLee3TJAs77yaUvlzkLdt9fYDZCrTdSYS4T7CUUQSAfe3rlZCrlaUkZCS63ditzXFZBp0BXSIP5owdr7T9Iib4pS9877SwZDZD
+    //     accessToken: `${Kieran - Place token here}`
     //   },
     // },
   ],
