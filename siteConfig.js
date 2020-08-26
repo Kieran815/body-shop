@@ -1,7 +1,7 @@
 module.exports = {
   name: "The Body Shop",
   shortName: "The Body Shop",
-  description: "Repairs Restorations Custom",
+  description: "Repair | Restoration | Custom",
   url: "https://www.jooplaan.com", // Domain of your site without prefix!
   prefix: "/",
   author: "by Timmy V.",
